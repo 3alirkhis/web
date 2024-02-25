@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página de Ofertas</title>
+    <style>
+        /* Aquí puedes agregar tus estilos CSS */
+    </style>
+</head>
+<body>
+    <h1>Mi Página de Ofertas</h1>
+    <input type="text" id="productLink" placeholder="Pega el enlace del producto aquí">
+    <button onclick="addProduct()">Agregar Producto</button>
+    <div id="productContainer"></div>
+
+    <script>
+        function addProduct() {
+            var link = document.getElementById('productLink').value;
+            // Aquí puedes agregar el código para obtener la información del producto a través del enlace
+            // Por ejemplo, puedes usar una API o hacer web scraping (asegúrate de que sea legal y esté permitido por el sitio web del que estás obteniendo la información)
+            var productInfo = getProductInfo(link); // Esta función debe ser definida por ti
+            var productContainer = document.getElementById('productContainer');
+            productContainer.innerHTML += '<div class="product">' + productInfo + '</div>';
+        }
+    </script>
+</body>
+</html>
