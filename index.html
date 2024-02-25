@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página de Ofertas</title>
+    <title>Mi Tienda Online</title>
     <style>
-        /* Aquí puedes agregar tus estilos CSS */
+        .product {
+            width: 25%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <h1>Mi Página de Ofertas</h1>
-    <input type="text" id="productLink" placeholder="Pega el enlace del producto aquí">
-    <button onclick="addProduct()">Agregar Producto</button>
-    <div id="productContainer"></div>
-
-    <script>
-        function addProduct() {
-            var link = document.getElementById('productLink').value;
-            // Aquí puedes agregar el código para obtener la información del producto a través del enlace
-            // Por ejemplo, puedes usar una API o hacer web scraping (asegúrate de que sea legal y esté permitido por el sitio web del que estás obteniendo la información)
-            var productInfo = getProductInfo(link); // Esta función debe ser definida por ti
-            var productContainer = document.getElementById('productContainer');
-            productContainer.innerHTML += '<div class="product">' + productInfo + '</div>';
-        }
-    </script>
+    <h1>Mi Tienda Online</h1>
+    <div id="productContainer">
+        <!-- Aquí puedes agregar tus productos -->
+        <div class="product">
+            <a href="https://www.producto1.com" target="_blank">
+                <img src="imagen_producto1.jpg">
+                <p>Nombre del Producto 1</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="https://www.producto2.com" target="_blank">
+                <img src="imagen_producto2.jpg">
+                <p>Nombre del Producto 2</p>
+            </a>
+        </div>
+        <!-- Agrega más productos de la misma manera -->
+    </div>
 </body>
 </html>
